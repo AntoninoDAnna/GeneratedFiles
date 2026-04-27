@@ -31,6 +31,7 @@ function findEndRecord(io::IOStream)
 end
 
 function readGF(filename)
+    isfile(filename) || return GeneratedFile(filename)
     records = Vector{Record}()
     open(filename,"r") do io
         while seekRecord(io)
