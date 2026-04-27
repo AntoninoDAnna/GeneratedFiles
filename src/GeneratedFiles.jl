@@ -1,4 +1,5 @@
 module GeneratedFiles
+using StringViews
 include("types.jl")
 include("filemanip.jl")
 
